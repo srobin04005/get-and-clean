@@ -1,4 +1,4 @@
-Cookbook - Explanbation of process
+Cookbook - Explanation of process
 ==================================
 
 
