@@ -1,5 +1,6 @@
-# setup working directory 
-setwd("C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning")
+# setup working directory - define your base Directory here
+baseDir <- "C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning"
+setwd(baseDir)
 
 # Document date, file and zip file create
 downloadDate <- date()
@@ -7,19 +8,20 @@ file <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HA
 myZip <- "UCI HAR Dataset.zip"
 
 #download Datasets zip file
-download.file(file, destfile = myZip)
+#download.file(file, destfile = myZip)
 
 # load the utils library and unzip the downloaded file into getwd()
 library(utils)
 unzip(myZip)
 
 # set directory and load the activity and features data
-setwd("C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning\\UCI HAR Dataset")
+setwd(paste0(baseDir,"/","UCI HAR Dataset"))
+      
 act_desc <- read.table("activity_labels.txt")
 features <- read.table("features.txt")
 
-testdir <- "C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning\\UCI HAR Dataset\\test"
-traindir <- "C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning\\UCI HAR Dataset\\train"
+testdir <- paste0(baseDir,"/", "/UCI HAR Dataset/test")
+traindir <- paste0(baseDir,"/", "/UCI HAR Dataset/train")
 
 # dir and dataset parameters
 processSets <- function(dir,dataset){
@@ -95,7 +97,7 @@ meltdata <- melt(mergeData, id=80:81)
 # cast the meltdata using subjec and activity to group on
 # apply average (mean) to all variable.
 tidy <- dcast(meltdata, subject + activity ~ variable, mean)
-names(myCast)[3:81] <- paste0("avg-",names(myCast)[3:81])
+names(tidy)[3:81] <- paste0("avg-",names(tidy)[3:81])
 
-setwd("C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning")
+setwd(baseDir)
 write.table(tidy, "tidy.txt")
