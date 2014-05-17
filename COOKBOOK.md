@@ -1,8 +1,8 @@
 Cookbook - Explanation of process
 ==================================
 
-
 Variables:
+-------------
 Initial working directory: "C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning"
 downloadDate = date()
 file = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
