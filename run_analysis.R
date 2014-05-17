@@ -97,4 +97,5 @@ meltdata <- melt(mergeData, id=80:81)
 tidy <- dcast(meltdata, subject + activity ~ variable, mean)
 names(myCast)[3:81] <- paste0("avg-",names(myCast)[3:81])
 
-
+setwd("C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning")
+write.table(tidy, "tidy.txt")
