@@ -94,6 +94,7 @@ mergeData$keyID <- NULL
 meltdata <- melt(mergeData, id=80:81)
 # cast the meltdata using subjec and activity to group on
 # apply average (mean) to all variable.
-myCast <- dcast(meltdata, subject + activity ~ variable, mean)
+tidy <- dcast(meltdata, subject + activity ~ variable, mean)
 names(myCast)[3:81] <- paste0("avg-",names(myCast)[3:81])
+
 
