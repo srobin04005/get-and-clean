@@ -8,6 +8,7 @@ file <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HA
 myZip <- "UCI HAR Dataset.zip"
 
 #download Datasets zip file
+# uncomment this if you need to download the file
 #download.file(file, destfile = myZip)
 
 # load the utils library and unzip the downloaded file into getwd()
