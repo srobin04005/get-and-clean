@@ -12,6 +12,97 @@ file = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR
 
 myZip = "UCI HAR Dataset.zip"
 
+Columns in dataset
+==================
+x,y,z - represents 3 separate measurements  
+
+subject = Individual
+
+activity = type of activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+
+avg-tbodyacc-mean()-x,y,z 
+
+avg-tgravityacc-mean()-x,y,z  
+ 
+avg-tbodyaccjerk-mean()-x,y,z
+ 
+avg-tbodygyro-mean()-x,y,z
+
+avg-tbodygyrojerk-mean()-x,y,z
+
+avg-tbodyaccmag-mean()
+
+avg-tgravityaccmag-mean()
+
+avg-tbodyaccjerkmag-mean()
+
+avg-tbodygyromag-mean()
+
+avg-tbodygyrojerkmag-mean()
+
+avg-fbodyacc-mean()-x,y,z
+
+avg-fbodyacc-meanfreq()-x,y,z
+
+avg-fbodyaccjerk-mean()-x,y,z
+
+avg-fbodyaccjerk-meanfreq()-x,y,z
+
+avg-fbodygyro-mean()-x,y,z
+
+avg-fbodygyro-meanfreq()-x,y,z
+
+avg-fbodyaccmag-mean()
+
+avg-fbodyaccmag-meanfreq()
+
+avg-fbodybodyaccjerkmag-mean()
+
+avg-fbodybodyaccjerkmag-meanfreq()
+
+avg-fbodybodygyromag-mean()
+
+avg-fbodybodygyromag-meanfreq()
+
+avg-fbodybodygyrojerkmag-mean()
+
+avg-fbodybodygyrojerkmag-meanfreq()
+
+avg-tbodyacc-std()-x,y,z
+
+avg-tgravityacc-std()-x,y,z
+
+avg-tbodyaccjerk-std()-x,y,z
+
+avg-tbodygyro-std()-x,y,z
+
+avg-tbodygyrojerk-std()-x,y,z
+
+avg-tbodyaccmag-std()
+
+avg-tgravityaccmag-std()
+
+avg-tbodyaccjerkmag-std()
+
+avg-tbodygyromag-std()
+
+avg-tbodygyrojerkmag-std()
+
+avg-fbodyacc-std()-x,y,z
+
+avg-fbodyaccjerk-std()-x,y,z
+
+avg-fbodygyro-std()-x,y,z
+
+avg-fbodyaccmag-std()
+
+avg-fbodybodyaccjerkmag-std()
+
+avg-fbodybodygyromag-std()
+
+avg-fbodybodygyrojerkmag-std()
+
+
 Since both test and train have the same data structure, a function was developed to process both datasets in a similar method.  A variable was created for each directory. 
 
 	**processSets(dir,dataset)**
