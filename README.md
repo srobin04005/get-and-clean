@@ -3,8 +3,11 @@ Average Mean and Standard Deviation by subject and activity of Human Activity Re
 Version 1.0
 ==================================================================
 Ronald Robinett
+
 Getting and Cleaning Data
+
 Johns Hopkins University
+
 Coursera MOOC - Data Science
 
 ==================================================================
