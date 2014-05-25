@@ -1,19 +1,30 @@
 Cookbook - Explanation of process
 ==================================
 
-
 Variables:
+<<<<<<< HEAD
 ==========
 Initial working directory: "C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning"
+=======
+-------------
+baseDir = Initial working directory
+
+>>>>>>> 69b3cd4d59557ec44a0b64645fe0534716810fbd
 downloadDate = date()
+
 file = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+
 myZip = "UCI HAR Dataset.zip"
+
+testdir = test dataset location
+
+trainidir = train dataset location
 
 Since both test and train have the same data structure, a function was developed to process both datasets in a similar method.  A variable was created for each directory. 
 
-	**processSets(dir,dataset)**
-		*dir:  set the directory to the appropriate location
-		*dataset:  'test' or 'train'
+	processSets(dir,dataset)
+		dir:  set the directory to the appropriate location
+		dataset:  'test' or 'train'
 	
 	1. processSets() reads X_data.txt, y_data.txt and subject_data.txt files from the appropriate directory. nrow() was used to create an index ID for all tables.  features.txt was used to name the X_data.txt columns, then all columns containing 'mean' and 'std' were extracted in a two part process that required rejoining mean and std data with an ID index.  Only mean and std observations were used in this analysis.
 
