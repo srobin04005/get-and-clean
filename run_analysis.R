@@ -8,7 +8,7 @@ file <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HA
 myZip <- "UCI HAR Dataset.zip"
 
 #download Datasets zip file
-# uncomment this if you need to download the file
+# uncomment following line if you need to download the file.
 #download.file(file, destfile = myZip)
 
 # load the utils library and unzip the downloaded file into getwd()
@@ -93,6 +93,8 @@ mergeData$keyID <- NULL
 # of each variable for each activity and each subject
 # label dataset with descriptive activity names
 
+library(data.table)
+library(reshape2)
 # melt dataset using last two columns (subject, activity) as id.vars
 meltdata <- melt(mergeData, id=80:81)
 # cast the meltdata using subjec and activity to group on
