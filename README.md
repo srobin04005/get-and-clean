@@ -18,7 +18,7 @@ The dataset includes the following files:
 
 - 'README.md': This file
 
-- 'COOKBOOK.md' :  Description of process and variables 
+- 'CODEBOOK.md' :  Description of process and variables 
 
 - 'run_analysis.R':  R source file that is used to obtain data and process datasets
 
