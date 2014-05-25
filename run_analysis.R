@@ -101,6 +101,7 @@ meltdata <- melt(mergeData, id=80:81)
 # apply average (mean) to all variable.
 tidy <- dcast(meltdata, subject + activity ~ variable, mean)
 names(tidy)[3:81] <- paste0("avg-",names(tidy)[3:81])
+names(tidy)<- tolower(names(tidy))
 
 setwd(baseDir)
 write.table(tidy, "tidy.txt")
