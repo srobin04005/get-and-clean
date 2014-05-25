@@ -5,8 +5,11 @@ Codebook - Explanation of process
 Variables:
 ==========
 basedir = Initial working directory: "C:\\Users\\srobin\\Documents\\R\\data\\GettingCleaning"
+
 downloadDate = date()
+
 file = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+
 myZip = "UCI HAR Dataset.zip"
 
 Since both test and train have the same data structure, a function was developed to process both datasets in a similar method.  A variable was created for each directory. 
